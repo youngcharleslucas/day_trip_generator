@@ -60,7 +60,7 @@ def user_destination(Destinations):
         destination = random.choice(Destinations)
         print(destination)
         user_input = input("Does this destination work for you?").upper()
-        if destination == "YES":
+        if user_input == "YES":
             return destination
             
 destination = user_destination (Destinations)
@@ -74,7 +74,7 @@ def user_restaurant(Restaurants):
         restaurant = random.choice(Restaurants)
         print(restaurant)
         user_input = input("Does this restaurant work for you?").upper()
-        if restaurant == "YES":
+        if user_input == "YES":
             return restaurant
             
 restaurant = user_restaurant (Restaurants)
@@ -88,10 +88,10 @@ def user_transportation(Transportions):
         transportation = random.choice(Transportions)
         print(transportation)
         user_input = input("Does this transportation work for you?").upper()
-        if transportation == "YES":
+        if user_input == "YES":
             return transportation
             
-transportation = user_transportation (Destinations)
+transportation = user_transportation (Transportations)
 
 # F -----------------
 
@@ -102,7 +102,7 @@ def user_entertainment(Entertainments):
         entertainment = random.choice(Entertainments)
         print(entertainment)
         user_input = input("Does this entertainment work for you?").upper()
-        if entertainment == "YES":
+        if user_input == "YES":
             return entertainment
             
 entertainment = user_entertainment (Entertainments)
@@ -132,7 +132,7 @@ statement = user_statement (destination, restaurant, transportation, entertainme
 #---------------------------------
 
 def user_confirmation ():
-    confirmation = input("Would you like to confirm this trip?")
+    confirmation = input("Would you like to confirm this trip?").upper()
     if confirmation == "YES":
         print("Enjoy your trip!")
     else:
@@ -140,161 +140,4 @@ def user_confirmation ():
 
 confirmation = user_confirmation()
 
-
-
-# def user_destination():
-#     import random
-#     destination = random.choice(Destinations)
-#     return destination
-
-# # D ----------------
-
-# def user_restraunt():
-#     import random
-#     restaurant = random.choice(Restaurants)
-#     return restaurant
-
-# # E -----------------
-
-# def user_transportation():
-#     import random
-#     transportation = random.choice(Transportations)
-#     return transportation
-
-# # F -----------------
-
-# def user_entertainment():
-#     import random
-#     entertainment = random.choice(Entertainments)
-#     return entertainment
-
-# # G ----------------
-
-# def trip_selection ():
-#     day_trip = [user_destination(), user_restraunt(), user_transportation(), user_entertainment()]
-#     return day_trip
-
-
-# H -----------------
-#
-
-
-
-
-
-
-
-
-
-
-
-
-
-def user_preference (destination, restaraunt, transportation, entertainment):
-    statement = """ 
-    I have an idea for a day trip!!!!!
-    You can go to {} for a destination
-    Then for dinner you can go to {}
-    To get there, you can take {}
-    and for entertainment, you can {}""".format (destination, restaraunt, transportation, entertainment)
-    Trip_assessment = [destination, restaraunt, transportation, entertainment]
-    print (statement)
-    return Trip_assessment
-
-
-
-# def user_verification ():
-#     change_list=[]
-#     Verification = input("Would you like to make any changes to the trip? Yes or No").upper()
-#     if Verification == "NO":
-#         print ("Enjoy your day trip!")
-#     else:
-#         Verification == "YES"
-#         print ("Let's make some changes")
-#         destination= input("Would you like to change the destination?").upper()
-#         change_list.append(str(destination))
-#         restaurant = input("Would you like to change the restaurant?").upper()
-#         change_list.append(str(restaurant))
-#         transportation = input("Would you like to change the transportation?").upper()
-#         change_list.append(str(transportation))
-#         entertainment = input("Would you like to change the entertainment?").upper()
-#         change_list.append(str(entertainment))
-#     return change_list
-
-
-
-
-
-# Trip_assessment = user_preference(user_destination(), user_restraunt(), user_transportation(), user_entertainment())
-# bill = user_verification()
-# print(bill)
-
-
-
-
-
-
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-#  def user_preference (destination, restaraunt, transportation, entertainment):
-#     statement = """ 
-#     I have an idea for a day trip!!!!!
-#     You can go to {} for a destination
-#     Then for dinner you can go to {}
-#     To get there, you can take {}
-#     and for entertainment, you can {}""".format (destination, restaraunt, transportation, entertainment)
-#     Trip_assessment = [destination, restaraunt, transportation, entertainment]
-#     print (statement)
-#     return Trip_assessment
-    
-    
-# def user_verification ():
-#     Verification = input("Would you like to make any changes to the trip? Yes or No").upper()
-#     if Verification == "NO":
-#         print ("Enjoy your day trip!")
-#     else:
-#         Verification == "YES"
-#         print ("Let's make some changes")
-
-# def user_changes (destination, restaurant, transportation, entertainment):
-#     List = []
-#     List.append(destination)
-#     List.append(restaurant)
-#     List.append(transportation)
-#     List.append(entertainment)
-#     return List
-
-
-
-# def destinations_change ():
-#     print("The destination?")
-#     destination = input("").upper
-#     return destination
-    
-# def restaurants_change ():
-#     print("The restaurant?")
-#     restaurant = input("").upper
-#     return restaurant
-
-# def destinations_change (): 
-#     print("The transportation?")
-#     transportation = input("").upper
-#     return transportation
-
-# def entertainment_change ():
-#     print("The entertainment?")
-#     entertainment = input("").upper
-#     return entertainment
-
-
-
-# user_preference(user_destination(), user_restraunt(), user_transportation(), user_entertainment())
-# user_verification ()
-# user_changes ()
 
