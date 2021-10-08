@@ -21,51 +21,38 @@ J. (5 points): As a developer, I want all of my functions to have a Single Respo
    function should do just one thing!
 
 
-
-pseudocode
-
-create lists of the 4 parameter lists
-
-functions to randomly select from lists
-    ask user if they want to re-select each item
-
-confirm the trip
-
-display completed trip to console
-
-
 '''
 
-# A----------------
+# A-----Make atleast 3 commits-----------
 
-# B----------------
+# B------Itenerary stored in lists----------
 
-Destinations = ["The mall", "Food truck", "My place"]
+Destinations = ["The mall", "A food truck", "My place"]
 
-Restaurants = ["Taco place", "Spaghetti place", "My place"]
+Restaurants = ["A taco place", "A Spaghetti place", "My place"]
 
-Transportations = ["Car", "Plane", "Eagle"]
+Transportations = ["Car", "Plane", "Enchanted eagle"]
 
-Entertainments = ["Space Ghost Coast to Coast", "Feed pigeons in park", "Walk dog"]
+Entertainments = ["Space Ghost Coast to Coast", "Feed pigeons in park", "Walking a dog"]
 
-# C-----------------
-
-
+# C------Destination and Randomly reselect-----------
 
 
-def user_destination(Destinations):
+
+
+def user_destination(Destinations): 
     import random
     user_input = "NO"
     while user_input == "NO":
         destination = random.choice(Destinations)
         print(destination)
-        user_input = input("Does this destination work for you?").upper()
+        user_input = input("Does this destination work for you?: ").upper()
         if user_input == "YES":
             return destination
             
 destination = user_destination (Destinations)
 
-# D ----------------
+# D ------Restaurants and Randomly reselect--------
 
 def user_restaurant(Restaurants):
     import random
@@ -73,13 +60,13 @@ def user_restaurant(Restaurants):
     while user_input == "NO":
         restaurant = random.choice(Restaurants)
         print(restaurant)
-        user_input = input("Does this restaurant work for you?").upper()
+        user_input = input("Does this restaurant work for you?: ").upper()
         if user_input == "YES":
             return restaurant
             
 restaurant = user_restaurant (Restaurants)
 
-# E -----------------
+# E ------Transportation and Randomly reselect-----------
 
 def user_transportation(Transportions):
     import random
@@ -87,13 +74,13 @@ def user_transportation(Transportions):
     while user_input == "NO":
         transportation = random.choice(Transportions)
         print(transportation)
-        user_input = input("Does this transportation work for you?").upper()
+        user_input = input("Does this transportation work for you?: ").upper()
         if user_input == "YES":
             return transportation
             
 transportation = user_transportation (Transportations)
 
-# F -----------------
+# F --------Entertainment and Randomly reselect---------
 
 def user_entertainment(Entertainments):
     import random
@@ -101,7 +88,7 @@ def user_entertainment(Entertainments):
     while user_input == "NO":
         entertainment = random.choice(Entertainments)
         print(entertainment)
-        user_input = input("Does this entertainment work for you?").upper()
+        user_input = input("Does this entertainment work for you?: ").upper()
         if user_input == "YES":
             return entertainment
             
@@ -109,14 +96,8 @@ entertainment = user_entertainment (Entertainments)
 
 # G ----------------
 
-def trip_selection (destination, restaurant, transportation, entertainment):
-    day_trip = [destination, restaurant, transportation, entertainment]
-    return day_trip
 
-trip_list = trip_selection (destination, restaurant, transportation, entertainment)
-
-
-# ----------------------------------------------
+# ----------------Print itenerary------------------------------
 
 
 def user_statement (destination, restaurant, transportation, entertainment):
@@ -129,10 +110,10 @@ def user_statement (destination, restaurant, transportation, entertainment):
 
 statement = user_statement (destination, restaurant, transportation, entertainment)
 
-#---------------------------------
+#-------------User confirmation--------------------
 
 def user_confirmation ():
-    confirmation = input("Would you like to confirm this trip?").upper()
+    confirmation = input("Would you like to confirm this trip? Yes or No ").upper()
     if confirmation == "YES":
         print("Enjoy your trip!")
     else:
